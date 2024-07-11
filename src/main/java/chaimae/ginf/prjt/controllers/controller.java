@@ -28,7 +28,7 @@ public class controller {
         // create student object to hold student form data
         Eleve student = new Eleve();
         model.addAttribute("student", student);
-        return "create_student";
+        return "ajouteeleve";
 
     }
     @PostMapping("/students")
@@ -40,7 +40,7 @@ public class controller {
     @GetMapping("/students/edit/{id}")
     public String editStudentForm(@PathVariable String id, Model model) {
         model.addAttribute("student", studentService.listByCne(id));
-        return "edit_student";
+        return "editstudent";
     }
 
     @PostMapping("/students/{id}")
